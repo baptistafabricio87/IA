@@ -75,9 +75,9 @@ for x in range(20):
 
     # linha que divide
     plt.plot(y, x, color='green', marker='*', linestyle='--')
-    
+
     # a valid value for ls; supported values are '-', '--', '-.', ':', 'None', '', '', 'solid', 'dashed', 'dashdot', 'dotted'
-    
+
     plt.title("Indices")
     plt.xlabel("Eixo X")
     plt.ylabel("Eixo Y")

@@ -23,7 +23,7 @@ saida1 = perceptron_output(weights, bias, x1)
 saida2 = perceptron_output(weights, bias, x2)
 saida3 = perceptron_output(weights, bias, x3)
 
-print("PERCEPTRON IMPLEMENTANDO FUNÇÃO BOOLEANA OR")
+print("PERCEPTRON IMPLEMENTANDO FUNcaO BOOLEANA OR")
 print("0 x 0 =", saida0)
 print("0 x 1 =", saida1)
 print("1 x 0 =", saida2)
