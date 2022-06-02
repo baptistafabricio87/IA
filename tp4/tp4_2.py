@@ -141,4 +141,4 @@ ax.plot(t, entrada)
 ax.plot(t, saida)
 plt.show()
 
-fig.savefig(r'./tp4/aprox_func.png')
+fig.savefig(r'./tp4/aprox_func_4_2.png')
