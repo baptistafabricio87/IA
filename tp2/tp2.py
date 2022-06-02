@@ -1,10 +1,6 @@
 from __future__ import division
-from collections import Counter
-from functools import partial
 
-import matplotlib
 import matplotlib.pyplot as plt
-import numpy
 from linear_algebra import dot
 
 
@@ -76,12 +72,9 @@ for x in range(20):
     # linha que divide
     plt.plot(y, x, color='green', marker='*', linestyle='--')
 
-    # a valid value for ls; supported values are '-', '--', '-.', ':', 'None', '', '', 'solid', 'dashed', 'dashdot', 'dotted'
-
     plt.title("Indices")
     plt.xlabel("Eixo X")
     plt.ylabel("Eixo Y")
-    # plt.show()
 
     padrao_teste_0 = [-1, 0.2, 0.4]
     padrao_teste_1 = [-1, 0.7, 0.8]
@@ -104,4 +97,5 @@ for x in range(20):
     neuronio, saida_1 = teste_generalizacao(neuronio, padrao_teste_5, saida1)
     print(neuronio, "entre ano w e z = ", saida_1)
 
+plt.savefig("./tp2/grafico.png")
 plt.show()

@@ -1,15 +1,17 @@
-# Trabalho 2 de Inteligência Artificial – manha
+# Trabalho 2 de Inteligência Artificial – Manhã
 ---
+| NOME                               | MATRICULA     |
+| ---------------------------------- | ------------- |
+| Fabricio Baptista de Castro        | 0050481821007 |
+| Mario Celso Zanin                  | 0050481921023 |
+---
+
 ## Código Algoritmo Perceptron
 
 ```python
 from __future__ import division
-from collections import Counter
-from functools import partial
 
-import matplotlib
 import matplotlib.pyplot as plt
-import numpy
 from linear_algebra import dot
 
 
@@ -81,8 +83,6 @@ for x in range(20):
     # linha que divide
     plt.plot(y, x, color='green', marker='*', linestyle='--')
 
-    # a valid value for ls; supported values are '-', '--', '-.', ':', 'None', '', '', 'solid', 'dashed', 'dashdot', 'dotted'
-
     plt.title("Indices")
     plt.xlabel("Eixo X")
     plt.ylabel("Eixo Y")
@@ -110,9 +110,11 @@ for x in range(20):
     print(neuronio, "entre ano w e z = ", saida_1)
 
 plt.show()
-
+plt.savefig("./tp2/grafico.png")
 ```
+
 ---
+
 ## Console
 
 ```powershell
@@ -379,7 +381,11 @@ TESTE DE GENERALIZACAO
 [0.4162, 0.30765000000000003, 0.3615200000000002] entre ano w e z =  0
 PS D:\workspace\IA>
 ```
+
 ---
+
 ## Gráfico
 
-![Gráfico](Figure_1.png)
+![Gráfico](grafico.png)
+
+---
