@@ -2,10 +2,7 @@ from __future__ import division
 
 import math
 import random
-from collections import Counter
-from functools import partial
 
-import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 from linear_algebra import dot
@@ -93,8 +90,8 @@ ax.plot(t, coeficiente_0)
 ax.plot(t, f)
 ax.set(xlabel='Angulo', ylabel='Funcoes', title='Adaline B')
 ax.grid()
-fig.savefig("./tp3/adaline_B.png")
-neuronio = teste_generalizacao(neuronio)
-funcao = teste_generalizacao(neuronio)
+fig.savefig("./tp3/img/adaline_B.png")
+neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
+fig.savefig("./tp3/img/adaline_B_1.png")

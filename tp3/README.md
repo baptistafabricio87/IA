@@ -1,25 +1,22 @@
 # Trabalho 3 de Inteligência Artificial – Manha
+
 ---
 | NOME                               | MATRICULA     |
 | ---------------------------------- | ------------- |
 | Fabricio Baptista de Castro        | 0050481821007 |
-| Luiz Guilherme dos Santos Gomes    | 0050482021044 |
 | Mario Celso Zanin                  | 0050481921023 |
-| Matheus Palma dos Santos           | 0050481921027 |
-| Ruhan Davidson Narciso de Carvalho | 0050481911031 |
-
 ---
+
 ## Código A
 
 ```python
 from __future__ import division
-from collections import Counter
-from functools import partial
-import matplotlib
-import matplotlib.pyplot as plt
-from linear_algebra import dot
-import numpy as np
+
 import math
+
+import matplotlib.pyplot as plt
+import numpy as np
+from linear_algebra import dot
 
 
 def saida_adaline(pesos, entradas):
@@ -103,16 +100,18 @@ ax.plot(t, seno_0)
 ax.plot(t, coseno_0)
 ax.plot(t, coeficiente_0)
 ax.plot(t, f)
-ax.set(xlabel='Angulo', ylabel='Funcoes', title='Adeline')
+ax.set(xlabel='Angulo', ylabel='Funcoes', title='Adeline A')
 ax.grid()
-fig.savefig("./tp3/adaline.png")
+fig.savefig("./tp3/img/adaline_A.png")
 neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
+fig.savefig("./tp3/img/adaline_A_1.png")
 
 ```
 ---
-## Console A
+
+## CONSOLE A
 
 ```powershell
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3.py
@@ -138,25 +137,32 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
 PS D:\workspace\IA> 
 ```
+
 ---
 ## Gráfico A
 
-![Grafico A](adaline_A.png)
+![Grafico A](/tp3/img/adaline_A.png)
+
+---
+
+## Gráfico A_1
+
+![Grafico A_1](/tp3/img/adaline_A_1.png)
 
 ---
 ---
+
 ## Código B
 
 ```python
 from __future__ import division
-from collections import Counter
-from functools import partial
+
 import math
 import random
-import matplotlib
+
 import matplotlib.pyplot as plt
-from linear_algebra import dot
 import numpy as np
+from linear_algebra import dot
 
 
 def saida_adaline(pesos, entradas):
@@ -234,7 +240,6 @@ for _ in range(30):
     neuronio, funcao_saida = linear(neuronio)
     print(neuronio)
 
-
 fig, ax = plt. subplots()
 ax.plot(t, seno_0)
 ax.plot(t, coseno_0)
@@ -242,14 +247,17 @@ ax.plot(t, coeficiente_0)
 ax.plot(t, f)
 ax.set(xlabel='Angulo', ylabel='Funcoes', title='Adaline B')
 ax.grid()
-fig.savefig("./tp3/adaline_B.png")
+fig.savefig("./tp3/img/adaline_B.png")
 neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
+fig.savefig("./tp3/img/adaline_B_1.png")
 
 ```
+
 ---
-## Console B
+
+## CONSOLE B
 
 ```powershell
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_B.py
@@ -285,9 +293,496 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.5548558258319267, 0.4652484611272247, 2.1317361132820873, 0.5042327089541789]
 PS D:\workspace\IA> 
 ```
+
 ---
+
 ## Gráfico B
 
-![Gráfico B](adaline_B.png)
+![Gráfico B](/tp3/img/adaline_B.png)
 
 ---
+
+## Gráfico B_1
+
+![Gráfico B_1](/tp3/img/adaline_B_1.png)
+
+---
+
+---
+
+## Codigo C
+
+```python
+
+from __future__ import division
+
+import math
+import random
+
+import matplotlib.pyplot as plt
+import numpy as np
+from linear_algebra import dot
+
+
+def saida_adaline(pesos, entradas):
+    y = dot(pesos, entradas)
+    return y
+
+
+def linear(sinapses):
+    pesos_sinapses = sinapses
+    taxa_aprendizagem = 0.1
+    trm_proporcionalidade = 1
+    seno = [i for i in range(45)]
+    coseno = [i for i in range(45)]
+    coeficiente = [i for i in range(45)]
+    entradas = [i for i in range(45)]
+    saida_parcial = [i for i in range(45)]
+
+    for i in range(45):
+        f[i] = -math.pi + 0.565 * math.sin(math.pi / 180 * i) + 2.657 * math.cos(
+            math.pi / 180 * i) + 0.674 * math.pi / 180 * i
+        seno[i] = math.sin(math.pi / 180 * i)
+        coseno[i] = math.cos(math.pi / 180 * i)
+        coeficiente[i] = math.pi / 180 * i
+        entradas[i] = [trm_proporcionalidade, seno[i], coseno[i], coeficiente[i]]
+        saida_parcial[i] = saida_adaline(pesos_sinapses, entradas[i])
+        pesos_sinapses[0] = pesos_sinapses[0] + taxa_aprendizagem * (
+                (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * trm_proporcionalidade
+        pesos_sinapses[1] = pesos_sinapses[1] + taxa_aprendizagem * (
+                (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.sin(math.pi / 180 * i)
+        pesos_sinapses[2] = pesos_sinapses[2] + taxa_aprendizagem * (
+                (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.cos(math.pi / 180 * i)
+        pesos_sinapses[3] = pesos_sinapses[3] + taxa_aprendizagem * (
+                (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.pi / 180 * i
+
+    return pesos_sinapses, saida_parcial
+
+
+def teste_generalizacao(sinapses):
+    pesos_sinapses = sinapses
+
+    trm_proporcionalidade = 1
+    seno = [i for i in range(359)]
+    coseno = [i for i in range(359)]
+    coeficiente = [i for i in range(359)]
+    entradas = [i for i in range(359)]
+    saida_parcial = [i for i in range(359)]
+
+    for i in range(359):
+        f[i] = -math.pi + 0.565 * (math.sin(math.pi / 180)) + 2.657 * (math.cos(math.pi / 180)) + 0.674 * (
+                math.pi / 180) * random.random()
+        seno[i] = (math.sin(math.pi / 180))
+        coseno[i] = (math.cos(math.pi / 180))
+        coeficiente[i] = (math.pi / 180) * random.random() * 2.4
+        entradas[i] = [trm_proporcionalidade, seno[i], coseno[i], coeficiente[i]]
+        saida_parcial[i] = saida_adaline(pesos_sinapses, entradas[i])
+
+    saida = saida_parcial
+    return sinapses, saida
+
+
+t = np.arange(0, 359, 1)
+seno_0 = 0 + np.sin(np.pi / 180 * t)
+coseno_0 = 0 + np.cos(np.pi / 180 * t)
+coeficiente_0 = 0 + np.pi / 180 * t
+trm_proporcionalidade = 1
+f = -np.pi + 0.565 * seno_0 + 2.657 * coseno_0 + 0.674 * coeficiente_0
+neuronio = [-2.4013, 0.393, 1.902, 0.429]
+
+for _ in range(20):
+    neuronio, funcao_saida = linear(neuronio)
+    print(neuronio)
+
+fig, ax = plt.subplots()
+ax.plot(t, seno_0)
+ax.plot(t, coseno_0)
+ax.plot(t, coeficiente_0)
+ax.plot(t, f)
+ax.set(xlabel='Angulo', ylabel='Funcao', title='Adaline C')
+ax.grid()
+fig.savefig("./tp3/img/adaline_C.png")
+neuronio, funcao = teste_generalizacao(neuronio)
+ax.plot(t, funcao)
+plt.show()
+fig.savefig("./tp3/img/adaline_C_1.png")
+
+```
+--- 
+
+## CONSOLE C
+
+```powershell
+PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_c.py
+[-2.384257896837099, 0.4002010569615759, 1.9171541526256302, 0.4365579909511697]
+[-2.375713185987777, 0.4040494644421408, 1.9246610574519638, 0.4406048232734468]   
+[-2.3704176085716337, 0.4064613924421921, 1.9292974418635058, 0.44314331006707186] 
+[-2.3666928620958925, 0.4081106135809584, 1.932569135560515, 0.44487958079701295]  
+[-2.3638324351436437, 0.4092990360912768, 1.9351035428282506, 0.44613055770560145] 
+[-2.3614837769244024, 0.41018391201543225, 1.937211386426462, 0.44706148886607494] 
+[-2.3594477295104896, 0.4108562733048119, 1.9390673901161979, 0.44776809826019126] 
+[-2.357599275426085, 0.41137334607351933, 1.9407811618970883, 0.44831057827274107] 
+[-2.3558512955808655, 0.41177383713226867, 1.9424294388478696, 0.44872963518758496]
+[-2.35413562544991, 0.4120860125628946, 1.944072903197295, 0.4490549737863405]     
+[-2.352391415120955, 0.4123325453757774, 1.9457665457643556, 0.4493103895061998]   
+[-2.350556108640622, 0.41253401209884244, 1.947567775009176, 0.4495174402203246]   
+[-2.348556026410302, 0.4127122078701474, 1.9495449835020602, 0.44969892565866987]  
+[-2.346293335623709, 0.4128944542361095, 1.9517894793275545, 0.449883408734274]    
+[-2.3436239519822224, 0.4131208515535026, 1.9544357218874913, 0.45011283326606644] 
+[-2.3403142512151236, 0.4134589038137204, 1.9577007904780412, 0.450457905140267]   
+[-2.3359446700282898, 0.41403763886678907, 1.9619716764705593, 0.45105403408128286]
+[-2.3296606779121274, 0.4151408706637388, 1.9680287867997617, 0.4521997615845962]
+[-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]
+[-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
+PS D:\workspace\IA> 
+
+```
+
+---
+
+## Gráfico C
+
+![Gráfico C](/tp3/img/adaline_C.png)
+
+---
+
+## Gráfico C_1
+
+![Gráfico C_1](/tp3/img/adaline_C_1.png)
+
+---
+
+---
+
+## Codigo D
+
+```python
+
+from __future__ import division
+
+import math
+import random as rdm
+
+import matplotlib.pyplot as plt
+import numpy as np
+from linear_algebra import dot
+
+
+def saida_adaline(pesos, entradas):
+    y = dot(pesos, entradas)
+    return y
+
+
+def linear(sinapses):
+    pesos_sinapses = sinapses
+    taxa_aprendizagem = 0.1
+    termo_proporcionalidade = 1
+    seno = [i for i in range(45)]
+    coseno = [i for i in range(45)]
+    coeficiente = [i for i in range(45)]
+    entradas = [i for i in range(45)]
+    saida_parcial = [i for i in range(45)]
+
+    for i in range(45):
+        f[i] = -math.pi + 0.565 * math.sin(math.pi / 180 * i) + 2.657 * math.cos(
+            math.pi / 180 * i) + 0.674 * math.pi / 180 * i
+        seno[i] = math.sin(math.pi / 180 * i)
+        coseno[i] = math.cos(math.pi / 180 * i)
+        coeficiente[i] = math.pi / 180 * i
+        entradas[i] = [termo_proporcionalidade, seno[i], coseno[i], coeficiente[i]]
+        saida_parcial[i] = saida_adaline(pesos_sinapses, entradas[i])
+        pesos_sinapses[0] = pesos_sinapses[0] + taxa_aprendizagem * (
+                    (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * termo_proporcionalidade
+        pesos_sinapses[1] = pesos_sinapses[1] + taxa_aprendizagem * (
+                    (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.sin(math.pi / 180 * i)
+        pesos_sinapses[2] = pesos_sinapses[2] + taxa_aprendizagem * (
+                    (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.cos(math.pi / 180 * i)
+        pesos_sinapses[3] = pesos_sinapses[3] + taxa_aprendizagem * (
+                    (f[i] - saida_parcial[i]) * (f[i] - saida_parcial[i])) * 0.5 * math.pi / 180 * i
+
+    return pesos_sinapses, saida_parcial
+
+
+def teste_generalizacao(sinapses):
+    pesos_sinapses = sinapses
+    termo_proporcionalidade = 1
+    seno = [i for i in range(359)]
+    coseno = [i for i in range(359)]
+    coeficiente = [i for i in range(359)]
+    entradas = [i for i in range(359)]
+    saida_parcial = [i for i in range(359)]
+
+    for i in range(359):
+        f[i] = -math.pi + 0.565 * (math.sin(math.pi / 180)) + 2.657 * (
+            math.cos(math.pi / 180)) * rdm.random() * 2.4 + 0.674 * (math.pi / 180)
+        seno[i] = (math.sin(math.pi / 180))
+        coseno[i] = (math.cos(math.pi / 180)) * rdm.random() * 2.4
+        coeficiente[i] = (math.pi / 180)
+        entradas[i] = [termo_proporcionalidade, seno[i], coseno[i], coeficiente[i]]
+        saida_parcial[i] = saida_adaline(pesos_sinapses, entradas[i])
+
+    saida = saida_parcial
+    return sinapses, saida
+
+
+t = np.arange(0, 359, 1)
+seno_0 = 0 + np.sin(np.pi / 180 * t)
+coseno_0 = 0 + np.cos(np.pi / 180 * t)
+coeficiente_0 = 0 + np.pi / 180 * t
+f = -np.pi + 0.565 * seno_0 + 2.657 * coseno_0 + 0.674 * coeficiente_0
+neuronio = [-2.4013, 0.393, 1.902, 0.429]
+
+for x in range(20):
+    neuronio, funcao_saida = linear(neuronio)
+    print(neuronio)
+
+fig, ax = plt.subplots()
+ax.plot(t, seno_0)
+ax.plot(t, coseno_0)
+ax.plot(t, coeficiente_0)
+ax.plot(t, f)
+ax.set(xlabel='Angulo', ylabel='Funcao', title='Adaline D')
+ax.grid()
+fig.savefig("./tp3/img/adaline_D.png")
+neuronio, funcao = teste_generalizacao(neuronio)
+ax.plot(t, funcao)
+plt.show()
+fig.savefig("./tp3/img/adaline_D_1.png")
+
+```
+
+--- 
+
+## CONSOLE D
+
+```powershell
+
+PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_d.py
+[-2.384257896837099, 0.4002010569615759, 1.9171541526256302, 0.4365579909511697]
+[-2.375713185987777, 0.4040494644421408, 1.9246610574519638, 0.4406048232734468]   
+[-2.3704176085716337, 0.4064613924421921, 1.9292974418635058, 0.44314331006707186] 
+[-2.3666928620958925, 0.4081106135809584, 1.932569135560515, 0.44487958079701295]  
+[-2.3638324351436437, 0.4092990360912768, 1.9351035428282506, 0.44613055770560145] 
+[-2.3614837769244024, 0.41018391201543225, 1.937211386426462, 0.44706148886607494] 
+[-2.3594477295104896, 0.4108562733048119, 1.9390673901161979, 0.44776809826019126] 
+[-2.357599275426085, 0.41137334607351933, 1.9407811618970883, 0.44831057827274107] 
+[-2.3558512955808655, 0.41177383713226867, 1.9424294388478696, 0.44872963518758496]
+[-2.35413562544991, 0.4120860125628946, 1.944072903197295, 0.4490549737863405]     
+[-2.352391415120955, 0.4123325453757774, 1.9457665457643556, 0.4493103895061998]   
+[-2.350556108640622, 0.41253401209884244, 1.947567775009176, 0.4495174402203246]   
+[-2.348556026410302, 0.4127122078701474, 1.9495449835020602, 0.44969892565866987]  
+[-2.346293335623709, 0.4128944542361095, 1.9517894793275545, 0.449883408734274]    
+[-2.3436239519822224, 0.4131208515535026, 1.9544357218874913, 0.45011283326606644] 
+[-2.3403142512151236, 0.4134589038137204, 1.9577007904780412, 0.450457905140267]   
+[-2.3359446700282898, 0.41403763886678907, 1.9619716764705593, 0.45105403408128286]
+[-2.3296606779121274, 0.4151408706637388, 1.9680287867997617, 0.4521997615845962]  
+[-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]  
+[-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
+PS D:\workspace\IA> 
+
+```
+
+---
+
+## Gráfico D
+
+![Gráfico D](/tp3/img/adaline_D.png)
+
+---
+
+## Gráfico D_1
+
+![Gráfico D_1](/tp3/img/adaline_D_1.png)
+
+---
+
+---
+
+## Codigo D
+
+```python
+
+from __future__ import division
+
+import math
+
+import matplotlib.pyplot as plt
+import numpy as np
+from linear_algebra import dot
+
+
+def saida_adaline(pesos, entradas):
+    y = dot(pesos, entradas)
+    return y
+
+
+def linear(sinapses):
+    pesos_sinapses = sinapses
+    taxa_aprendizagem = 0.1
+    termo_proporcionalidade = 1
+    seno = [i for i in range(45)]
+    coseno = [i for i in range(45)]
+    coeficiente = [i for i in range(45)]
+    entradas = [i for i in range(45)]
+    saida_parcial = [i for i in range(45)]
+
+    for x in range(45):
+        f[x] = -math.pi + 0.565 * math.sin(math.pi / 180 * x) + 2.657 * \
+            math.cos(math.pi / 180 * x) + 0.674 * math.pi / 180 * x
+        seno[x] = math.sin(math.pi / 180*x)
+        coseno[x] = math.cos(math.pi / 180*x)
+        coeficiente[x] = math.pi / 180 * x
+        entradas[x] = [termo_proporcionalidade,
+                       seno[x], coseno[x], coeficiente[x]]
+        saida_parcial[x] = saida_adaline(pesos_sinapses, entradas[x])
+        pesos_sinapses[0] = pesos_sinapses[0] + taxa_aprendizagem * \
+            ((f[x] - saida_parcial[x]) * (f[x] - saida_parcial[x])) * \
+            0.5 * termo_proporcionalidade
+        pesos_sinapses[1] = pesos_sinapses[1] + taxa_aprendizagem * \
+            ((f[x] - saida_parcial[x]) * (f[x] - saida_parcial[x])) * \
+            0.5 * math.sin(math.pi / 180 * x)
+        pesos_sinapses[2] = pesos_sinapses[2] + taxa_aprendizagem * \
+            ((f[x] - saida_parcial[x]) * (f[x] - saida_parcial[x])) * \
+            0.5 * math.cos(math.pi / 180 * x)
+        pesos_sinapses[3] = pesos_sinapses[3] + taxa_aprendizagem * \
+            ((f[x] - saida_parcial[x]) * (f[x] - saida_parcial[x])) * \
+            0.5 * math.pi / 180 * x
+
+    return pesos_sinapses, saida_parcial
+
+
+def teste_generalização(sinapses):
+    pesos_sinapses = sinapses
+
+    termo_proporcionalidade = 1
+    seno = [i for i in range(359)]
+    coseno = [i for i in range(359)]
+    coeficiente = [i for i in range(359)]
+    entradas = [i for i in range(359)]
+    saida_parcial = [i for i in range(359)]
+
+    for x in range(359):
+        f[x] = -math.pi + 0.565 * (math.sin(math.pi / 180)) \
+            * (math.cos(math.pi / 180) * 1.3) + 2.657 * (math.cos(math.pi / 180)) \
+            * (math.sin(math.pi / 180) * 1.2) + 0.674 * (math.pi / 180) * 0.8
+
+        seno[x] = (math.sin(math.pi / 180)) * (math.cos(math.pi / 180) * 1.3)
+        coseno[x] = (math.cos(math.pi / 180)) * (math.sin(math.pi/180) * 1.2)
+        coeficiente[x] = (math.pi / 180) * 0.8
+        entradas[x] = [termo_proporcionalidade,
+                       seno[x], coseno[x], coeficiente[x]]
+        saida_parcial[x] = saida_adaline(pesos_sinapses, entradas[x])
+
+    saida = saida_parcial
+    return sinapses, saida
+
+
+t = np.arange(0, 359, 1)
+seno_0 = 0 + np.sin(np.pi/180 * t)
+coseno_0 = 0 + np.cos(np.pi/180 * t)
+coeficiente_0 = 0 + np.pi/180 * t
+f = -np.pi + 0.565 * seno_0 + 2.657 * coseno_0 + 0.674 * coeficiente_0
+
+neuronio = [-2.4013, 0.393, 1.902, 0.429]
+
+for _ in range(20):
+    neuronio, função_saida = linear(neuronio)
+    print(neuronio)
+
+
+fig, ax = plt. subplots()
+ax.plot(t, seno_0)
+ax.plot(t, coseno_0)
+ax.plot(t, coeficiente_0)
+ax.plot(t, f)
+ax.set(xlabel='Angulo ()', ylabel='Funcoes', title='Adaline E')
+ax.grid()
+
+fig.savefig("adaline_E.png")
+neuronio, função = teste_generalização(neuronio)
+ax.plot(t, função)
+plt.show()
+fig.savefig("adaline_E_1.png")
+
+```
+
+--- 
+
+## Console E
+
+```powershell
+
+PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_e.py
+[-2.384257896837099, 0.4002010569615759, 1.9171541526256302, 0.4365579909511697]
+[-2.375713185987777, 0.4040494644421408, 1.9246610574519638, 0.4406048232734468]  
+[-2.3704176085716337, 0.4064613924421921, 1.9292974418635058, 0.44314331006707186]
+[-2.3666928620958925, 0.4081106135809584, 1.932569135560515, 0.44487958079701295]
+[-2.3638324351436437, 0.4092990360912768, 1.9351035428282506, 0.44613055770560145]
+[-2.3614837769244024, 0.41018391201543225, 1.937211386426462, 0.44706148886607494]
+[-2.3594477295104896, 0.4108562733048119, 1.9390673901161979, 0.44776809826019126]
+[-2.357599275426085, 0.41137334607351933, 1.9407811618970883, 0.44831057827274107]
+[-2.3558512955808655, 0.41177383713226867, 1.9424294388478696, 0.44872963518758496]
+[-2.35413562544991, 0.4120860125628946, 1.944072903197295, 0.4490549737863405]
+[-2.352391415120955, 0.4123325453757774, 1.9457665457643556, 0.4493103895061998]
+[-2.350556108640622, 0.41253401209884244, 1.947567775009176, 0.4495174402203246]
+[-2.348556026410302, 0.4127122078701474, 1.9495449835020602, 0.44969892565866987]
+[-2.346293335623709, 0.4128944542361095, 1.9517894793275545, 0.449883408734274]
+[-2.3436239519822224, 0.4131208515535026, 1.9544357218874913, 0.45011283326606644]
+[-2.3403142512151236, 0.4134589038137204, 1.9577007904780412, 0.450457905140267]
+[-2.3359446700282898, 0.41403763886678907, 1.9619716764705593, 0.45105403408128286]
+[-2.3296606779121274, 0.4151408706637388, 1.9680287867997617, 0.4521997615845962]
+[-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]
+[-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
+PS D:\workspace\IA> 
+
+```
+
+---
+
+## Gráfico E
+
+![Gráfico E](/tp3/img/adaline_E.png)
+
+---
+
+## Gráfico E_1
+
+![Gráfico E_1](/tp3/img/adaline_E_1.png)
+
+---
+
+---
+
+## Codigo F
+
+```python
+
+
+```
+
+--- 
+
+## Console F
+
+```powershell
+
+ 
+
+```
+
+---
+
+## Gráfico F
+
+![Gráfico F](adaline_F.png)
+
+---
+
+## Gráfico F_1
+
+![Gráfico F_1](adaline_F_1.png)
+
+---
+
+---
+

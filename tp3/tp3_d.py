@@ -2,10 +2,10 @@ from __future__ import division
 
 import math
 import random as rdm
-from linear_algebra import dot
 
 import matplotlib.pyplot as plt
 import numpy as np
+from linear_algebra import dot
 
 
 def saida_adaline(pesos, entradas):
@@ -83,7 +83,8 @@ ax.plot(t, coeficiente_0)
 ax.plot(t, f)
 ax.set(xlabel='Angulo', ylabel='Funcao', title='Adaline D')
 ax.grid()
-fig.savefig("adaline_D.png")
+fig.savefig("./tp3/img/adaline_D.png")
 neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
+fig.savefig("./tp3/img/adaline_D_1.png")
