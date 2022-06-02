@@ -165,7 +165,7 @@ Comando Saída: [[3.0876456389154616, 2.5541047064912576, -0.753778038425914]]
 
 ---
 ## Gráfico 2
-![Grafico 2](/tp4/aprox_func.png)
+![Grafico 2](aprox_func_4_2.png)
 
 ---
 ---
@@ -330,7 +330,9 @@ Comando Saída [[0.47456396285410474, 1.4762831613931822, 1.2157725109924669, 1.
 
 ---
 ## Gráfico 3
-![Grafico 3](/tp4/aprox_func.png)
+![Grafico 3](aprox_func_4_3.png)
+
+
 
 ---
 ---

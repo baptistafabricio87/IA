@@ -141,13 +141,13 @@ PS D:\workspace\IA>
 ---
 ## Gráfico A
 
-![Grafico A](/tp3/img/adaline_A.png)
+![Grafico A](img/adaline_A.png)
 
 ---
 
 ## Gráfico A_1
 
-![Grafico A_1](/tp3/img/adaline_A_1.png)
+![Grafico A_1](img/adaline_A_1.png)
 
 ---
 ---
@@ -298,13 +298,13 @@ PS D:\workspace\IA>
 
 ## Gráfico B
 
-![Gráfico B](/tp3/img/adaline_B.png)
+![Gráfico B](img/adaline_B.png)
 
 ---
 
 ## Gráfico B_1
 
-![Gráfico B_1](/tp3/img/adaline_B_1.png)
+![Gráfico B_1](img/adaline_B_1.png)
 
 ---
 
@@ -408,7 +408,7 @@ plt.show()
 fig.savefig("./tp3/img/adaline_C_1.png")
 
 ```
---- 
+---
 
 ## CONSOLE C
 
@@ -442,13 +442,13 @@ PS D:\workspace\IA>
 
 ## Gráfico C
 
-![Gráfico C](/tp3/img/adaline_C.png)
+![Gráfico C](img/adaline_C.png)
 
 ---
 
-## Gráfico C_1
+## Gráfico C_
 
-![Gráfico C_1](/tp3/img/adaline_C_1.png)
+![Gráfico C_1](img/adaline_C_1.png)
 
 ---
 
@@ -551,7 +551,7 @@ fig.savefig("./tp3/img/adaline_D_1.png")
 
 ```
 
---- 
+---
 
 ## CONSOLE D
 
@@ -586,13 +586,13 @@ PS D:\workspace\IA>
 
 ## Gráfico D
 
-![Gráfico D](/tp3/img/adaline_D.png)
+![Gráfico D](img/adaline_D.png)
 
 ---
 
 ## Gráfico D_1
 
-![Gráfico D_1](/tp3/img/adaline_D_1.png)
+![Gráfico D_1](img/adaline_D_1.png)
 
 ---
 
@@ -706,7 +706,7 @@ fig.savefig("adaline_E_1.png")
 
 ```
 
---- 
+---
 
 ## Console E
 
@@ -741,13 +741,13 @@ PS D:\workspace\IA>
 
 ## Gráfico E
 
-![Gráfico E](/tp3/img/adaline_E.png)
+![Gráfico E](img/adaline_E.png)
 
 ---
 
 ## Gráfico E_1
 
-![Gráfico E_1](/tp3/img/adaline_E_1.png)
+![Gráfico E_1](img/adaline_E_1.png)
 
 ---
 
@@ -845,7 +845,7 @@ fig.savefig("./tp3/img/adaline_F_1.png")
 
 ```
 
---- 
+---
 
 ## Console F
 
@@ -878,10 +878,10 @@ PS D:\workspace\IA>
 
 ---
 ## Gráfico F
-![Gráfico F](/tp3/img/adaline_F.png)
+![Gráfico F](img/adaline_F.png)
 ---
 ## Gráfico F_1
-![Gráfico F_1](/tp3/img/adaline_F_1.png)
+![Gráfico F_1](img/adaline_F_1.png)
 ---
 
 ---
@@ -984,7 +984,7 @@ fig.savefig("./tp3/img/adaline_G_1.png")
 
 ```
 
---- 
+---
 ## Console F
 ```powershell
 
@@ -1015,9 +1015,9 @@ PS D:\workspace\IA>
 
 ---
 ## Gráfico G
-![Gráfico G](/tp3/img/adaline_G.png)
+![Gráfico G](img/adaline_G.png)
 ---
 ## Gráfico G_1
-![Gráfico G_1](/tp3/img/adaline_G_1.png)
+![Gráfico G_1](img/adaline_G_1.png)
 ---
 ---

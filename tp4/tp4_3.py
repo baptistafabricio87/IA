@@ -134,11 +134,11 @@ entrada = []
 for x in range(360):
     entrada += seno(x)  # criando o arranjo da função de entrada para o gráfico
 
-ax.plot(t, entrada)
-ax.plot(t, saida)
-
 print(f'Comando Entrada {hidden_layer}')
 print(f'Comando Saída {output_layer}')
 
+ax.plot(t, entrada)
+ax.plot(t, saida)
+
 plt.show()
-plt.savefig(r'./tp4/aprox_func_4_3.png')
+fig.savefig(r'./tp4/aprox_func_4_3.png')
