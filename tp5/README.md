@@ -1,4 +1,5 @@
 # Trabalho 5 de Inteligência Artificial – Manha
+
 ---
 ---
 | NOME                               | MATRICULA     |
@@ -7,14 +8,13 @@
 | Mario Celso Zanin                  | 0050481921023 |
 ---
 ---
+
 ## Código
 
 ```python
-
 import math
 import random
 
-import matplotlib.pyplot as plt
 from linear_algebra import dot
 
 
@@ -155,6 +155,7 @@ if __name__ == "__main__":
         print(i, [round(p, 2) for p in outputs])
 
     # TESTE DE DÍGITOS NUMÉRICOS QUE NÃO FORAM TREINADOS
+    # TESTE DE DÍGITOS NUMÉRICOS QUE NÃO FORAM TREINADOS
     print("""
             .@@@.
             @...@
@@ -169,7 +170,51 @@ if __name__ == "__main__":
                     1, 0, 0, 0, 1,      # @...@
                     1, 0, 0, 0, 1])])   # @...@
     print("Interprete como variação do dígito A")
+    
+    print("""
+            @@@@@
+            @....
+            @@@..
+            @....
+            @@@@@
+                """,)
+    print([round(x, 2) for x in
+           predict([1, 1, 1, 1, 1,      # @@@@@
+                    1, 0, 0, 0, 0,      # @....
+                    1, 1, 1, 0, 0,      # @@@..
+                    1, 0, 0, 0, 0,      # @....
+                    1, 1, 1, 1, 1])])   # @@@@@
+    print("Interprete como variação do dígito E")
 
+    print("""
+            .@@@.
+            ..@..
+            ..@..
+            ..@..
+            .@@@.
+                """,)
+    print([round(x, 2) for x in
+           predict([0, 1, 1, 1, 0,      # .@@@.
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 1, 1, 1, 0])])   # .@@@.
+    print("Interprete como variação do dígito I")
+
+    print("""
+            .@@@.
+            @...@
+            @...@
+            @...@
+            .@@@.
+                """)
+    print([round(x, 2) for x in
+           predict([0, 1, 1, 1, 0,      # .@@@.
+                    1, 0, 0, 0, 1,      # @...@
+                    1, 0, 0, 0, 1,      # @...@
+                    1, 0, 0, 0, 1,      # @...@
+                    0, 1, 1, 1, 0])])   # .@@@.
+    print("Interprete como possível variação do dígito U")
     print("""
             @...@
             @...@
@@ -184,9 +229,10 @@ if __name__ == "__main__":
                     1, 0, 0, 0, 1,      # @...@
                     0, 1, 1, 1, 0])])   # .@@@.
     print("Interprete como possível variação do dígito U")
-
 ```
+
 ---
+
 ## Console
 
 ```powershell
@@ -207,6 +253,33 @@ Entradas Treinadas
 [0.82, 0.38, 0.0, 0.09, 0.0]
 Interprete como variação do dígito A
 
+            @@@@@
+            @....
+            @@@..
+            @....
+            @@@@@
+
+[0.0, 0.11, 0.19, 0.38, 0.01]
+Interprete como variação do dígito E
+
+            .@@@.
+            ..@..
+            ..@..
+            ..@..
+            .@@@.
+
+[0.0, 0.09, 0.79, 0.44, 0.01]
+Interprete como variação do dígito I
+
+            .@@@.
+            @...@
+            @...@
+            @...@
+            .@@@.
+
+[0.2, 0.34, 0.0, 0.11, 0.0]
+Interprete como possível variação do dígito U
+
             @...@
             @...@
             @...@
@@ -215,8 +288,12 @@ Interprete como variação do dígito A
 
 [0.0, 0.01, 0.0, 0.01, 0.98]
 Interprete como possível variação do dígito U
-PS D:\workspace\IA> 
-
+PS D:\workspace\IA>
 ```
+
 ---
 ---
+
+### Conclusão
+
+> Verificamos que ao realizar os testes com os novos caracteres os valores do treinamento foram bem próximos em alguns caracteres com nas letras A e U que a diferença foi mínima.

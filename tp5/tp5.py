@@ -7,7 +7,6 @@ Created on Wed Apr 27 23:01:30 2022
 import math
 import random
 
-import matplotlib.pyplot as plt
 from linear_algebra import dot
 
 
@@ -148,6 +147,7 @@ if __name__ == "__main__":
         print(i, [round(p, 2) for p in outputs])
 
     # TESTE DE DÍGITOS NUMÉRICOS QUE NÃO FORAM TREINADOS
+    # TESTE DE DÍGITOS NUMÉRICOS QUE NÃO FORAM TREINADOS
     print("""
             .@@@.
             @...@
@@ -162,7 +162,51 @@ if __name__ == "__main__":
                     1, 0, 0, 0, 1,      # @...@
                     1, 0, 0, 0, 1])])   # @...@
     print("Interprete como variação do dígito A")
+    
+    print("""
+            @@@@@
+            @....
+            @@@..
+            @....
+            @@@@@
+                """,)
+    print([round(x, 2) for x in
+           predict([1, 1, 1, 1, 1,      # @@@@@
+                    1, 0, 0, 0, 0,      # @....
+                    1, 1, 1, 0, 0,      # @@@..
+                    1, 0, 0, 0, 0,      # @....
+                    1, 1, 1, 1, 1])])   # @@@@@
+    print("Interprete como variação do dígito E")
 
+    print("""
+            .@@@.
+            ..@..
+            ..@..
+            ..@..
+            .@@@.
+                """,)
+    print([round(x, 2) for x in
+           predict([0, 1, 1, 1, 0,      # .@@@.
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 0, 1, 0, 0,      # ..@..
+                    0, 1, 1, 1, 0])])   # .@@@.
+    print("Interprete como variação do dígito I")
+
+    print("""
+            .@@@.
+            @...@
+            @...@
+            @...@
+            .@@@.
+                """)
+    print([round(x, 2) for x in
+           predict([0, 1, 1, 1, 0,      # .@@@.
+                    1, 0, 0, 0, 1,      # @...@
+                    1, 0, 0, 0, 1,      # @...@
+                    1, 0, 0, 0, 1,      # @...@
+                    0, 1, 1, 1, 0])])   # .@@@.
+    print("Interprete como possível variação do dígito U")
     print("""
             @...@
             @...@
