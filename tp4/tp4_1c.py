@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 27 23:01:30 2022
-
-@author: MarioCelso
-"""
 from __future__ import division
 
 import math  # pg 56 - Summerfield
@@ -132,6 +126,5 @@ print ("comando entrada", hidden_layer)
 print ("comando saída", output_layer)
    
 plt.show()
-plt.show()
-fig.savefig('aprox_func_1c.png')
+fig.savefig('./tp4/img/aprox_func_1c.png')
 

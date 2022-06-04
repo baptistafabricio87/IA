@@ -89,7 +89,6 @@ output_layer = [[0.082, -0.09, 0.064, -0.08, 0.084, -0.075, 0.099]] """
 hidden_layer = [[random.random() for __ in range(input_size + 1)]
                 for __ in range(num_hidden)]
 
-#print(hidden_layer)
 # neurônio de saída tem um peso sináptico associado a cada neurôio da camada intermediária
 # e adicionado o peso do bias
 output_layer = [[random.random() for __ in range(num_hidden +1)]
@@ -132,6 +131,4 @@ print ("comando entrada", hidden_layer)
 print ("comando saída", output_layer)
    
 plt.show()
-plt.show()
-fig.savefig('aprox_func_1b.png')
-
+fig.savefig('tp4/img/aprox_func_1b.png')
