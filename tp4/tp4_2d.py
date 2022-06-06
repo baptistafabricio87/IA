@@ -131,4 +131,4 @@ print (f'Comando Entrada {hidden_layer}')
 print (f'Comando Saída {output_layer}')
    
 plt.show()
-fig.savefig('aprox_func_2d.png')
+fig.savefig('./tp4/img/aprox_func_2d.png')

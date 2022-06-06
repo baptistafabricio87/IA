@@ -1,6 +1,5 @@
 # Trabalho 3 de Inteligência Artificial – Manha
 
----
 | NOME                               | MATRICULA     |
 | ---------------------------------- | ------------- |
 | Fabricio Baptista de Castro        | 0050481821007 |
@@ -107,11 +106,8 @@ neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
 fig.savefig("./tp3/img/adaline_A_1.png")
-
 ```
----
-
-## CONSOLE A
+## Console A
 
 ```powershell
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3.py
@@ -138,14 +134,7 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 PS D:\workspace\IA> 
 ```
 
----
 ## Gráfico A
-
-![Grafico A](img/adaline_A.png)
-
----
-
-## Gráfico A_1
 
 ![Grafico A_1](img/adaline_A_1.png)
 
@@ -252,12 +241,9 @@ neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
 fig.savefig("./tp3/img/adaline_B_1.png")
-
 ```
 
----
-
-## CONSOLE B
+## Console B
 
 ```powershell
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_B.py
@@ -294,15 +280,7 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 PS D:\workspace\IA> 
 ```
 
----
-
 ## Gráfico B
-
-![Gráfico B](img/adaline_B.png)
-
----
-
-## Gráfico B_1
 
 ![Gráfico B_1](img/adaline_B_1.png)
 
@@ -310,7 +288,7 @@ PS D:\workspace\IA>
 
 ---
 
-## Codigo C
+## Código C
 
 ```python
 
@@ -406,11 +384,8 @@ neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
 fig.savefig("./tp3/img/adaline_C_1.png")
-
 ```
----
-
-## CONSOLE C
+## Console C
 
 ```powershell
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_c.py
@@ -435,18 +410,9 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
 PS D:\workspace\IA> 
-
 ```
 
----
-
 ## Gráfico C
-
-![Gráfico C](img/adaline_C.png)
-
----
-
-## Gráfico C_
 
 ![Gráfico C_1](img/adaline_C_1.png)
 
@@ -454,10 +420,9 @@ PS D:\workspace\IA>
 
 ---
 
-## Codigo D
+## Código D
 
 ```python
-
 from __future__ import division
 
 import math
@@ -548,12 +513,9 @@ neuronio, funcao = teste_generalizacao(neuronio)
 ax.plot(t, funcao)
 plt.show()
 fig.savefig("./tp3/img/adaline_D_1.png")
-
 ```
 
----
-
-## CONSOLE D
+## Console D
 
 ```powershell
 
@@ -579,18 +541,9 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]  
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
 PS D:\workspace\IA> 
-
 ```
 
----
-
 ## Gráfico D
-
-![Gráfico D](img/adaline_D.png)
-
----
-
-## Gráfico D_1
 
 ![Gráfico D_1](img/adaline_D_1.png)
 
@@ -598,10 +551,9 @@ PS D:\workspace\IA>
 
 ---
 
-## Codigo D
+## Código E
 
 ```python
-
 from __future__ import division
 
 import math
@@ -703,10 +655,7 @@ neuronio, função = teste_generalização(neuronio)
 ax.plot(t, função)
 plt.show()
 fig.savefig("adaline_E_1.png")
-
 ```
-
----
 
 ## Console E
 
@@ -734,18 +683,9 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
 PS D:\workspace\IA> 
-
 ```
 
----
-
 ## Gráfico E
-
-![Gráfico E](img/adaline_E.png)
-
----
-
-## Gráfico E_1
 
 ![Gráfico E_1](img/adaline_E_1.png)
 
@@ -756,7 +696,6 @@ PS D:\workspace\IA>
 ## Codigo F
 
 ```python
-
 from __future__ import division
 
 import math
@@ -842,15 +781,11 @@ neuronio, função = teste_generalização(neuronio)
 ax.plot(t, função)
 plt.show()
 fig.savefig("./tp3/img/adaline_F_1.png")
-
 ```
-
----
 
 ## Console F
 
 ```powershell
-
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_f.py
 [-2.384257896837099, 0.4002010569615759, 1.9171541526256302, 0.4365579909511697]
 [-2.375713185987777, 0.4040494644421408, 1.9246610574519638, 0.4406048232734468]   
@@ -873,21 +808,18 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]  
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]  
 PS D:\workspace\IA>  
-
 ```
 
----
 ## Gráfico F
-![Gráfico F](img/adaline_F.png)
----
-## Gráfico F_1
 ![Gráfico F_1](img/adaline_F_1.png)
 ---
 
 ---
-## Codigo F
-```python
 
+---
+
+## Código G
+```python
 from __future__ import division
 
 import math
@@ -981,11 +913,9 @@ neuronio, função = teste_generalização(neuronio)
 ax.plot(t, função)
 plt.show()
 fig.savefig("./tp3/img/adaline_G_1.png")
-
 ```
 
----
-## Console F
+## Console G
 ```powershell
 
 PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/python.exe d:/workspace/IA/tp3/tp3_g.py
@@ -1010,14 +940,8 @@ PS D:\workspace\IA> & C:/Users/bapti/AppData/Local/Programs/Python/Python310/pyt
 [-2.319382669108915, 0.4175234906158972, 1.9777468393392166, 0.45469137845192825]
 [-2.298311523848835, 0.42393396595697963, 1.997142099126486, 0.46143930778130315]
 PS D:\workspace\IA>
-
 ```
 
----
 ## Gráfico G
-![Gráfico G](img/adaline_G.png)
----
-## Gráfico G_1
 ![Gráfico G_1](img/adaline_G_1.png)
----
 ---
